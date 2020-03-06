@@ -14,6 +14,7 @@
 		473884FD2411ADB900C66085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473884FC2411ADB900C66085 /* Assets.xcassets */; };
 		473885002411ADB900C66085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473884FE2411ADB900C66085 /* LaunchScreen.storyboard */; };
 		4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473885092411BAD500C66085 /* CustomerListTableViewController.swift */; };
+		473885102411D96800C66085 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738850F2411D96800C66085 /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		473884FF2411ADB900C66085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		473885012411ADB900C66085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473885092411BAD500C66085 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
+		4738850F2411D96800C66085 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				473884FE2411ADB900C66085 /* LaunchScreen.storyboard */,
 				473885012411ADB900C66085 /* Info.plist */,
 				473885092411BAD500C66085 /* CustomerListTableViewController.swift */,
+				4738850F2411D96800C66085 /* Customer.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */,
+				473885102411D96800C66085 /* Customer.swift in Sources */,
 				473884F82411ADB700C66085 /* LoginViewController.swift in Sources */,
 				473884F42411ADB700C66085 /* AppDelegate.swift in Sources */,
 				473884F62411ADB700C66085 /* SceneDelegate.swift in Sources */,
