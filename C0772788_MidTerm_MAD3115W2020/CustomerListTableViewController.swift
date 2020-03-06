@@ -10,13 +10,15 @@ import UIKit
 
 class CustomerListTableViewController: UIViewController {
 
+    @IBOutlet weak var tblCustomer: UITableView!
+    var customers:[Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "Customer List"
+        customers = DataStorage.getInstance().getAllCustomers()
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -27,4 +29,28 @@ class CustomerListTableViewController: UIViewController {
     }
     */
 
+}
+
+extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
+{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
+        let customer = customers[indexPath.row]
+        cell?.textLabel?.text = customer.fullName
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let c = customers[indexPath.row];
+        print(c.fullName);
+    }
+    
 }
