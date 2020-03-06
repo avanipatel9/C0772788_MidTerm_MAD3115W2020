@@ -100,16 +100,81 @@
                         <viewLayoutGuide key="safeArea" id="xSE-3e-VIZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lhu-Vc-5qn">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="YLE-ge-DXF"/>
-                        <barButtonItem key="rightBarButtonItem" title="addCustomer" image="person.badge.plus" catalog="system" id="aMN-wd-iN2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="YLE-ge-DXF">
+                            <connections>
+                                <segue destination="ozT-4F-7da" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="rfl-k7-DHd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="addCustomer" image="person.badge.plus" catalog="system" id="aMN-wd-iN2">
+                            <connections>
+                                <segue destination="7Qs-8u-JvH" kind="show" id="Kyg-pu-j1p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tblCustomer" destination="GBC-o0-sJN" id="1JY-sl-nD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxP-Av-CqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ozT-4F-7da" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1785.5072463768117" y="116.51785714285714"/>
+        </scene>
+        <!--Add New Customer View Controller-->
+        <scene sceneID="9uF-iS-Tvk">
+            <objects>
+                <viewController id="7Qs-8u-JvH" customClass="AddNewCustomerViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bxV-dh-iE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy6-ah-tsq">
+                                <rect key="frame" x="20" y="132" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOf-lW-2n8">
+                                <rect key="frame" x="20" y="187" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvb-Wa-mGJ">
+                                <rect key="frame" x="20" y="241" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVs-td-6mB">
+                                <rect key="frame" x="20" y="297" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHF-Ku-XLL">
+                                <rect key="frame" x="116" y="368" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Customer"/>
+                                <connections>
+                                    <action selector="btnAddNewCustomer:" destination="7Qs-8u-JvH" eventType="touchUpInside" id="spl-D0-sqU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bfm-Y1-yPQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iHq-jZ-dFs"/>
+                    <connections>
+                        <outlet property="txtCustomerID" destination="cy6-ah-tsq" id="wjj-r6-br7"/>
+                        <outlet property="txtEmail" destination="EVs-td-6mB" id="QBa-dN-XF5"/>
+                        <outlet property="txtFirstName" destination="KOf-lW-2n8" id="om5-LN-Ezd"/>
+                        <outlet property="txtLastName" destination="Vvb-Wa-mGJ" id="sYk-Xg-LJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tb-nt-sPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2494.202898550725" y="115.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="deV-MM-mao">

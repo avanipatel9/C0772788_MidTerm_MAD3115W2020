@@ -16,6 +16,7 @@
 		4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473885092411BAD500C66085 /* CustomerListTableViewController.swift */; };
 		473885102411D96800C66085 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738850F2411D96800C66085 /* Customer.swift */; };
 		473885122411DA7900C66085 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473885112411DA7900C66085 /* DataStorage.swift */; };
+		473F163E2412D61200EEC35A /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		473885092411BAD500C66085 /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		4738850F2411D96800C66085 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		473885112411DA7900C66085 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				473885092411BAD500C66085 /* CustomerListTableViewController.swift */,
 				4738850F2411D96800C66085 /* Customer.swift */,
 				473885112411DA7900C66085 /* DataStorage.swift */,
+				473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473F163E2412D61200EEC35A /* AddNewCustomerViewController.swift in Sources */,
 				4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */,
 				473885102411D96800C66085 /* Customer.swift in Sources */,
 				473884F82411ADB700C66085 /* LoginViewController.swift in Sources */,
