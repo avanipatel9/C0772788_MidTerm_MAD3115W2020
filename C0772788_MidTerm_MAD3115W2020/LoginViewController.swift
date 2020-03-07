@@ -52,12 +52,28 @@ class LoginViewController: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Error", message: "Try Again, User Email/Password is incorrect ", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true)
+            if self.txtUserName.text == ""
+            {
+                showAlert(message: "Please Enter Username")
+            }
+            else if self.txtPassword.text == ""
+            {
+                showAlert(message: "Please Enter Password")
+            }
+            else
+            {
+                showAlert(message: "Try Again, Username/Password is incorrect")
+            }
         }
         
+    }
+    
+    func showAlert(message: String)
+    {
+        let alert = UIAlertController(title: "Error", message:message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
     
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
