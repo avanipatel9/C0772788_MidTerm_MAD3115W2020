@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="2494.202898550725" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Bill Details View Controller-->
         <scene sceneID="702-VY-u5L">
             <objects>
-                <viewController id="q0d-nr-AvZ" sceneMemberID="viewController">
+                <viewController id="q0d-nr-AvZ" customClass="ShowBillDetailsViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rrm-YD-EM9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
