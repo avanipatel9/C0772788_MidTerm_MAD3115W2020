@@ -17,6 +17,7 @@
 		473885102411D96800C66085 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738850F2411D96800C66085 /* Customer.swift */; };
 		473885122411DA7900C66085 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473885112411DA7900C66085 /* DataStorage.swift */; };
 		473F163E2412D61200EEC35A /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */; };
+		47BFB3C3241330660093EC3B /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB3C2241330660093EC3B /* ShowBillDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4738850F2411D96800C66085 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		473885112411DA7900C66085 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
+		47BFB3C2241330660093EC3B /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				4738850F2411D96800C66085 /* Customer.swift */,
 				473885112411DA7900C66085 /* DataStorage.swift */,
 				473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */,
+				47BFB3C2241330660093EC3B /* ShowBillDetailsViewController.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				473885122411DA7900C66085 /* DataStorage.swift in Sources */,
 				473884F42411ADB700C66085 /* AppDelegate.swift in Sources */,
 				473884F62411ADB700C66085 /* SceneDelegate.swift in Sources */,
+				47BFB3C3241330660093EC3B /* ShowBillDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
