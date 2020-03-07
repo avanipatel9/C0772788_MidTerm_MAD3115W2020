@@ -51,6 +51,8 @@ extension CustomerListTableViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let c = customers[indexPath.row];
         print(c.fullName);
+        
+        self.performSegue(withIdentifier: "billDetails", sender: self)
     }
     
 }

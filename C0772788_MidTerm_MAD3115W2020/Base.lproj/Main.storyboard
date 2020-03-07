@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="STb-KE-vhN"/>
+                    <navigationItem key="navigationItem" title="Login" id="STb-KE-vhN"/>
                     <connections>
                         <outlet property="switchRememberMe" destination="kf6-Id-tMt" id="l1Q-eD-OtV"/>
                         <outlet property="txtPassword" destination="kPW-l0-KuB" id="eVz-pU-uNE"/>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--Customer List Table View Controller-->
+        <!--Customer List-->
         <scene sceneID="1qy-NP-2dv">
             <objects>
                 <viewController id="vS3-Cm-iXv" customClass="CustomerListTableViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xSE-3e-VIZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lhu-Vc-5qn">
+                    <navigationItem key="navigationItem" title="Customer List" id="Lhu-Vc-5qn">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="YLE-ge-DXF">
                             <connections>
                                 <segue destination="ozT-4F-7da" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="rfl-k7-DHd"/>
@@ -113,6 +113,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tblCustomer" destination="GBC-o0-sJN" id="1JY-sl-nD5"/>
+                        <segue destination="q0d-nr-AvZ" kind="show" identifier="billDetails" id="6b6-lg-VEJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxP-Av-CqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -120,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="1785.5072463768117" y="116.51785714285714"/>
         </scene>
-        <!--Add New Customer View Controller-->
+        <!--Add New Customer-->
         <scene sceneID="9uF-iS-Tvk">
             <objects>
                 <viewController id="7Qs-8u-JvH" customClass="AddNewCustomerViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,7 +165,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Bfm-Y1-yPQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iHq-jZ-dFs"/>
+                    <navigationItem key="navigationItem" title="Add New Customer" id="iHq-jZ-dFs"/>
                     <connections>
                         <outlet property="txtCustomerID" destination="cy6-ah-tsq" id="wjj-r6-br7"/>
                         <outlet property="txtEmail" destination="EVs-td-6mB" id="QBa-dN-XF5"/>
@@ -176,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="2494.202898550725" y="115.84821428571428"/>
         </scene>
-        <!--Show Bill Details View Controller-->
+        <!--Bill Details-->
         <scene sceneID="702-VY-u5L">
             <objects>
                 <viewController id="q0d-nr-AvZ" customClass="ShowBillDetailsViewController" customModule="C0772788_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,6 +187,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MpN-e1-dke"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Bill Details" id="uis-pb-IPS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GoN-Qq-faR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
