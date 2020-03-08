@@ -24,6 +24,6 @@ class Customer
         self.customerID=customerID
         self.firstName=firstName
         self.lastName=lastName
-        self.emailID=emailID//.isValidEmail(email: emailID)
+        self.emailID=emailID
     }
 }

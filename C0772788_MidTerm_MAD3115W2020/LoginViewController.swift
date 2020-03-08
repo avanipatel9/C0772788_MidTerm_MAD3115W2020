@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         getRememberMeValues()
         // Do any additional setup after loading the view.
     }
-    
+    //function to get saved remember me values
     private func getRememberMeValues()
     {
         let userdefault = UserDefaults.standard
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
             //showAlert(message: "Please Enter Password")
             return
         }
-        
+        //reading Admin Plist
         if let path = Bundle.main.path(forResource: "Admin", ofType: "plist")
         {
             if let dictionary = NSMutableDictionary(contentsOfFile: path)
@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
                     var flag = false
                     for admin in admins
                     {
+                        // validating user for login
                         if admin["username"] == userEmail && admin["password"] == userPassword
                         {
                             flag = true
