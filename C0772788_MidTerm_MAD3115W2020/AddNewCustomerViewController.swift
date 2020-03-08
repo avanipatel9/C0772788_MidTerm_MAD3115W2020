@@ -10,6 +10,7 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
     
+    var validation = Validation()
     @IBOutlet weak var txtCustomerID: UITextField!
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
@@ -23,10 +24,20 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBAction func btnAddNewCustomer(_ sender: UIButton)
     {
-        let newCustomerID = txtCustomerID.text ?? ""
-        let newCustomerFirstName = txtFirstName.text ?? ""
-        let newCustomerLastName = txtLastName.text ?? ""
-        let newCustomerEmail = txtEmail.text ?? ""
+        var validatedCustomerEmail = String()
+        guard let newCustomerID = txtCustomerID.text else {return}
+        guard let newCustomerFirstName = txtFirstName.text else {return}
+        guard let newCustomerLastName = txtLastName.text else {return}
+        guard let newCustomerEmail = txtEmail.text else {return}
+        if self.validation.isValidEmail(email: newCustomerEmail) == false
+        {
+            showAlert(message: "Invalid Email ID")
+        }
+        else
+        {
+            validatedCustomerEmail = newCustomerEmail
+        }
+        
         
         if  newCustomerID == ""
         {
@@ -46,8 +57,7 @@ class AddNewCustomerViewController: UIViewController {
         }
         else
         {
-            DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, emailID: newCustomerEmail))
-            
+            DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, emailID: validatedCustomerEmail))
         }
     }
     
@@ -58,13 +68,4 @@ class AddNewCustomerViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
