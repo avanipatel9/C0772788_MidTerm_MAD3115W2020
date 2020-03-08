@@ -34,37 +34,63 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func btnNextClick(_ sender: UIButton) {
-        if self.txtUserName.text == "asdfg@gmail.com" && self.txtPassword.text == "asd.123"
+        guard  let userEmail = txtUserName.text else {
+            //showAlert(message: "Please Enter Email ID")
+            return
+        }
+        guard let userPassword = txtPassword.text else {
+            //showAlert(message: "Please Enter Password")
+            return
+        }
+        
+        if let path = Bundle.main.path(forResource: "Admin", ofType: "plist")
         {
-            let userdefault = UserDefaults.standard
-            if switchRememberMe.isOn
+            if let dictionary = NSMutableDictionary(contentsOfFile: path)
             {
-                userdefault.setValue(txtUserName.text, forKey: "userEmail")
-                userdefault.set(txtPassword.text, forKey: "userPassword")
-            }
-            else
-            {
-                userdefault.removeObject(forKey: "userEmail")
-                userdefault.removeObject(forKey: "userPassword")
+                if let admins = dictionary["admins"] as? [[String:String]]
+                {
+                    var flag = false
+                    for admin in admins
+                    {
+                        if admin["username"] == userEmail && admin["password"] == userPassword
+                        {
+                            flag = true
+                        }
+                    }
+                    if flag == true
+                    {
+                        let userdefault = UserDefaults.standard
+                        if switchRememberMe.isOn
+                        {
+                            userdefault.setValue(userEmail, forKey: "userEmail")
+                            userdefault.set(userPassword, forKey: "userPassword")
+                        }
+                        else
+                        {
+                            userdefault.removeObject(forKey: "userEmail")
+                            userdefault.removeObject(forKey: "userPassword")
+                        }
+                    }
+                    else{
+                        if self.txtUserName.text == ""
+                        {
+                            showAlert(message: "Please Enter Username")
+                        }
+                        else if self.txtPassword.text == ""
+                        {
+                            showAlert(message: "Please Enter Password")
+                        }
+                        else
+                        {
+                            showAlert(message: "Try Again, Username/Password is incorrect")
+                        }
+                    }
+                }
             }
         }
-        else
-        {
-            if self.txtUserName.text == ""
-            {
-                showAlert(message: "Please Enter Username")
-            }
-            else if self.txtPassword.text == ""
-            {
-                showAlert(message: "Please Enter Password")
-            }
-            else
-            {
-                showAlert(message: "Try Again, Username/Password is incorrect")
-            }
-        }
+        
         
     }
     
@@ -80,6 +106,6 @@ class LoginViewController: UIViewController {
     {
         print("Logout")
     }
-
+    
 }
 
