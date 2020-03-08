@@ -32,6 +32,7 @@ class AddNewCustomerViewController: UIViewController {
         if self.validation.isValidEmail(email: newCustomerEmail) == false
         {
             showAlert(message: "Invalid Email ID")
+            return
         }
         else
         {
@@ -42,18 +43,22 @@ class AddNewCustomerViewController: UIViewController {
         if  newCustomerID == ""
         {
             showAlert(message: "Please Enter Customer ID")
+            return
         }
         else if newCustomerFirstName == ""
         {
             showAlert(message: "Please Enter First Name")
+            return
         }
         else if newCustomerLastName == ""
         {
             showAlert(message: "Please Enter Last Name")
+            return
         }
         else if newCustomerEmail == ""
         {
             showAlert(message: "Please Enter Email")
+            return
         }
         else
         {

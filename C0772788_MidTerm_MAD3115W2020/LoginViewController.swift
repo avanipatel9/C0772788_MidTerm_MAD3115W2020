@@ -77,14 +77,17 @@ class LoginViewController: UIViewController {
                         if self.txtUserName.text == ""
                         {
                             showAlert(message: "Please Enter Username")
+                            return
                         }
                         else if self.txtPassword.text == ""
                         {
                             showAlert(message: "Please Enter Password")
+                            return
                         }
                         else
                         {
                             showAlert(message: "Try Again, Username/Password is incorrect")
+                            return
                         }
                     }
                 }
