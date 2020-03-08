@@ -65,15 +65,18 @@ class LoginViewController: UIViewController {
                         let userdefault = UserDefaults.standard
                         if switchRememberMe.isOn
                         {
+                            // saving user inputs to userdefaults
                             userdefault.setValue(userEmail, forKey: "userEmail")
                             userdefault.set(userPassword, forKey: "userPassword")
                         }
                         else
                         {
+                            //removing incorrect user inputs from userdefaults
                             userdefault.removeObject(forKey: "userEmail")
                             userdefault.removeObject(forKey: "userPassword")
                         }
                     }
+                    
                     else{
                         if self.txtUserName.text == ""
                         {
