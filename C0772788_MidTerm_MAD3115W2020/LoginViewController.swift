@@ -111,6 +111,7 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+// function to perform logout
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
     {
         print("Logout")
