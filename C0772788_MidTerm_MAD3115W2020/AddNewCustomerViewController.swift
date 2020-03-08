@@ -60,12 +60,14 @@ class AddNewCustomerViewController: UIViewController {
             showAlert(message: "Please Enter Email")
             return
         }
+        // adding new customer
         else
         {
             DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, emailID: validatedCustomerEmail))
         }
     }
     
+// function to show alert
     func showAlert(message: String)
     {
         let alert = UIAlertController(title: "Error", message:message, preferredStyle: .alert)
