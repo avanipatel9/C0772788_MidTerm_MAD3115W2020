@@ -20,7 +20,7 @@ class ShowBillDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         displaySelectedCustomerDetails()
     }
-    
+// function to display details by selecting cutomer from CustomerListTableViewController
     func displaySelectedCustomerDetails()
     {
         guard let customerID = self.customer?.customerID else {
