@@ -4,7 +4,8 @@
 //
 //  Created by Avani Patel on 3/5/20.
 //  Copyright © 2020 Avani Patel. All rights reserved.
-//
+
+//Singleton class
 
 import Foundation
 class DataStorage
@@ -18,10 +19,11 @@ class DataStorage
     {
         return dataStorage
     }
-    
+// function to add new customer
     func addCustomer(customer: Customer) {
         self.customerList.updateValue(customer, forKey: customer.customerID)
     }
+// function to get all customer
     func getAllCustomers() -> [Customer] {
         return Array(customerList.values);
     }

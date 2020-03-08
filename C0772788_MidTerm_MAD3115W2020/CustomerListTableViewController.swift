@@ -49,9 +49,7 @@ extension CustomerListTableViewController: UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let c = customers[indexPath.row];
-        print(c.fullName);
-        //self.performSegue(withIdentifier: "billDetails", sender: self)
+// shows the selected customers details in ShowBillDetailsViewController
         let customers = DataStorage.getInstance().getAllCustomers()
         let selectedCustomer = customers[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
