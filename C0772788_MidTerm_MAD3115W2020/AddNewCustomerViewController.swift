@@ -9,7 +9,6 @@
 import UIKit
 
 class AddNewCustomerViewController: UIViewController {
-    
     var validation = Validation()
     @IBOutlet weak var txtCustomerID: UITextField!
     @IBOutlet weak var txtFirstName: UITextField!
@@ -29,6 +28,7 @@ class AddNewCustomerViewController: UIViewController {
         guard let newCustomerFirstName = txtFirstName.text else {return}
         guard let newCustomerLastName = txtLastName.text else {return}
         guard let newCustomerEmail = txtEmail.text else {return}
+        //validating email
         if self.validation.isValidEmail(email: newCustomerEmail) == false
         {
             showAlert(message: "Invalid Email ID")
@@ -39,7 +39,7 @@ class AddNewCustomerViewController: UIViewController {
             validatedCustomerEmail = newCustomerEmail
         }
         
-        
+        //validating empty fields and showing alert for it
         if  newCustomerID == ""
         {
             showAlert(message: "Please Enter Customer ID")

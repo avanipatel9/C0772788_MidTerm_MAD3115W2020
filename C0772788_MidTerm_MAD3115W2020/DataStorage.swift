@@ -28,7 +28,8 @@ class DataStorage
         return Array(customerList.values);
     }
     
-    func loadData()
+// function to load all Customer Data
+    func loadCustomerData()
     {
         customerList.updateValue(Customer(customerID: "C001", firstName: "Avani", lastName: "Patel", emailID: "admin@gmail.com"), forKey: "C001")
          customerList.updateValue(Customer(customerID: "C002", firstName: "Jyothi", lastName: "Thomas", emailID: "admin@gmail.com"), forKey: "C002")
