@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
                             userdefault.removeObject(forKey: "userPassword")
                         }
                     }
-                    
+                    //showing alert for empty fields
                     else{
                         if self.txtUserName.text == ""
                         {
@@ -88,6 +88,7 @@ class LoginViewController: UIViewController {
                             showAlert(message: "Please Enter Password")
                             return
                         }
+                        // showing alert for incorrect inputs
                         else
                         {
                             showAlert(message: "Try Again, Username/Password is incorrect")
@@ -101,6 +102,7 @@ class LoginViewController: UIViewController {
         
     }
     
+// function to show alert
     func showAlert(message: String)
     {
         let alert = UIAlertController(title: "Error", message:message, preferredStyle: .alert)
