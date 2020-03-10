@@ -1,26 +1,29 @@
 //
-//  ShowBillDetailsViewController.swift
+//  ShowCustomerDetailsViewController.swift
 //  C0772788_MidTerm_MAD3115W2020
 //
-//  Created by Avani Patel on 3/6/20.
+//  Created by Avani Patel on 3/10/20.
 //  Copyright © 2020 Avani Patel. All rights reserved.
 //
 
 import UIKit
 
-class ShowBillDetailsViewController: UIViewController {
-       
+class ShowCustomerDetailsViewController: UIViewController {
+
     var customer : Customer?
-    
     @IBOutlet weak var lblID: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         displaySelectedCustomerDetails()
+        // Do any additional setup after loading the view.
     }
-// function to display details by selecting cutomer from CustomerListTableViewController
+    
+    @IBAction func btnViewBillsClick(_ sender: Any) {
+        
+    }
+    
     func displaySelectedCustomerDetails()
     {
         guard let customerID = self.customer?.customerID else {
@@ -38,6 +41,4 @@ class ShowBillDetailsViewController: UIViewController {
         lblEmail.text = "Email ID : \(customerEmail)"
         
     }
-    
-
 }

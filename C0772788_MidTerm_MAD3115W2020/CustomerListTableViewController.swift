@@ -53,7 +53,7 @@ extension CustomerListTableViewController: UITableViewDataSource, UITableViewDel
         let customers = DataStorage.getInstance().getAllCustomers()
         let selectedCustomer = customers[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let custDetailsVC = sb.instantiateViewController(identifier: "customerDetailsVC") as ShowBillDetailsViewController
+        let custDetailsVC = sb.instantiateViewController(identifier: "customerDetailsVC") as ShowCustomerDetailsViewController
         custDetailsVC.customer = selectedCustomer
         self.navigationController?.pushViewController(custDetailsVC, animated: true)
     }
