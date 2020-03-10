@@ -18,4 +18,9 @@ class Hydro: Bill
         self.unitConsumed=unitConsumed
         super.init(billID: billID, billDate: billDate, billType: billType)
     }
+    
+    override func calculateTotalBill()
+    {
+        self.billAmount = Double(unitConsumed)*ratePerUnit
+    }
 }

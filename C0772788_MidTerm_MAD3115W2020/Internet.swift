@@ -19,4 +19,9 @@ class Internet: Bill
         self.internetGBUsed = internetGBUsed
         super.init(billID: billID, billDate: billDate, billType: billType)
     }
+    
+    override func calculateTotalBill()
+    {
+        self.billAmount = internetGBUsed*ratePerGB
+    }
 }

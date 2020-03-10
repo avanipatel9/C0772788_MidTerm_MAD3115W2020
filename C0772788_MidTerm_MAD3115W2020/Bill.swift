@@ -12,7 +12,7 @@ enum BillType
     case INTERNET, MOBILE, HYDRO, INSURANCE
 }
 
-class Bill
+class Bill: CalculateBill
 {
     var billID: String
     var billDate: Date
@@ -23,5 +23,9 @@ class Bill
         self.billID = billID
         self.billDate = billDate
         self.billType = billType
+    }
+    
+    func calculateTotalBill() {
+        
     }
 }

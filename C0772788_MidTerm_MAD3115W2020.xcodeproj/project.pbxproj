@@ -22,6 +22,7 @@
 		477CBBAE241837B700AD158B /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBAD241837B700AD158B /* Mobile.swift */; };
 		477CBBB0241837C400AD158B /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBAF241837C400AD158B /* Internet.swift */; };
 		477CBBB2241837D600AD158B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB1241837D600AD158B /* Bill.swift */; };
+		477CBBB424183AEE00AD158B /* CalculateBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB324183AEE00AD158B /* CalculateBill.swift */; };
 		47BFB3C3241330660093EC3B /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFB3C2241330660093EC3B /* ShowBillDetailsViewController.swift */; };
 		47DF0E3C24144EED00DD6151 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF0E3B24144EED00DD6151 /* Validation.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		477CBBAD241837B700AD158B /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		477CBBAF241837C400AD158B /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		477CBBB1241837D600AD158B /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		477CBBB324183AEE00AD158B /* CalculateBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBill.swift; sourceTree = "<group>"; };
 		47BFB3C2241330660093EC3B /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		47DF0E3B24144EED00DD6151 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				477CBBAD241837B700AD158B /* Mobile.swift */,
 				477CBBAF241837C400AD158B /* Internet.swift */,
 				477CBBB1241837D600AD158B /* Bill.swift */,
+				477CBBB324183AEE00AD158B /* CalculateBill.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */,
 				473885102411D96800C66085 /* Customer.swift in Sources */,
 				473884F82411ADB700C66085 /* LoginViewController.swift in Sources */,
+				477CBBB424183AEE00AD158B /* CalculateBill.swift in Sources */,
 				47DF0E3C24144EED00DD6151 /* Validation.swift in Sources */,
 				477CBBB0241837C400AD158B /* Internet.swift in Sources */,
 				477CBBAE241837B700AD158B /* Mobile.swift in Sources */,
