@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Customer
+class Customer: CalculateBill
 {
     var customerID:String
     var firstName:String
@@ -17,7 +17,7 @@ class Customer
         return "\(firstName) \(lastName)"
     }
     var emailID:String
-    //lazy var bills = [String : Bill]()
+    lazy var bills = [String : Bill]()
     var totalBillToPay : Double = 0.0
     
     init(customerID:String, firstName:String, lastName:String, emailID:String) {
@@ -26,4 +26,22 @@ class Customer
         self.lastName=lastName
         self.emailID=emailID
     }
+    
+    func addBill(bill: Bill, billID: String)
+    {
+        bills.updateValue(bill, forKey: billID)
+    }
+    
+    func removeBill(bill: Bill, billID: String)
+    {
+        bills.removeValue(forKey: billID)
+        print("Bill removed with ID \(billID)")
+    }
+    
+    func calculateTotalBill() {
+        for i in bills {
+            totalBillToPay = totalBillToPay + i.value.billAmount
+        }
+    }
+    
 }
