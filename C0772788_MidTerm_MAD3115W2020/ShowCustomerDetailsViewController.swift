@@ -21,6 +21,10 @@ class ShowCustomerDetailsViewController: UIViewController {
     }
     
     @IBAction func btnViewBillsClick(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let billDetailsVC = sb.instantiateViewController(identifier: "billDetailsVC") as! ShowBillDetailsViewController
+        billDetailsVC.customer = self.customer
+        navigationController?.pushViewController(billDetailsVC, animated: true)
         
     }
     

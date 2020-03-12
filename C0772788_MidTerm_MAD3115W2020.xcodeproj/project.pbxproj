@@ -25,6 +25,7 @@
 		477CBBB424183AEE00AD158B /* CalculateBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB324183AEE00AD158B /* CalculateBill.swift */; };
 		477CBBB624183D5000AD158B /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB524183D5000AD158B /* Extension+Date.swift */; };
 		477CBBB82418443000AD158B /* ShowCustomerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB72418443000AD158B /* ShowCustomerDetailsViewController.swift */; };
+		477CBBBA24184AEA00AD158B /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBB924184AEA00AD158B /* ShowBillDetailsViewController.swift */; };
 		47DF0E3C24144EED00DD6151 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF0E3B24144EED00DD6151 /* Validation.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		477CBBB324183AEE00AD158B /* CalculateBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBill.swift; sourceTree = "<group>"; };
 		477CBBB524183D5000AD158B /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		477CBBB72418443000AD158B /* ShowCustomerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCustomerDetailsViewController.swift; sourceTree = "<group>"; };
+		477CBBB924184AEA00AD158B /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		47DF0E3B24144EED00DD6151 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				477CBBB324183AEE00AD158B /* CalculateBill.swift */,
 				477CBBB524183D5000AD158B /* Extension+Date.swift */,
 				477CBBB72418443000AD158B /* ShowCustomerDetailsViewController.swift */,
+				477CBBB924184AEA00AD158B /* ShowBillDetailsViewController.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				473884F42411ADB700C66085 /* AppDelegate.swift in Sources */,
 				473884F62411ADB700C66085 /* SceneDelegate.swift in Sources */,
 				477CBBB2241837D600AD158B /* Bill.swift in Sources */,
+				477CBBBA24184AEA00AD158B /* ShowBillDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

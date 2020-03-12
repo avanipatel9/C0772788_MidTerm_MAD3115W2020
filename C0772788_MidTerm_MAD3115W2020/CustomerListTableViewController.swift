@@ -19,16 +19,6 @@ class CustomerListTableViewController: UIViewController {
         self.navigationItem.title = "Customer List"
         customers = DataStorage.getInstance().getAllCustomers()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
@@ -52,10 +42,15 @@ extension CustomerListTableViewController: UITableViewDataSource, UITableViewDel
 // shows the selected customers details in ShowBillDetailsViewController
         let customers = DataStorage.getInstance().getAllCustomers()
         let selectedCustomer = customers[indexPath.row]
+        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let custDetailsVC = sb.instantiateViewController(identifier: "customerDetailsVC") as ShowCustomerDetailsViewController
+        let billDetailsVC = sb.instantiateViewController(identifier: "billDetailsVC") as ShowBillDetailsViewController
         custDetailsVC.customer = selectedCustomer
+        billDetailsVC.customer = selectedCustomer
+        
         self.navigationController?.pushViewController(custDetailsVC, animated: true)
+        
     }
     
 }

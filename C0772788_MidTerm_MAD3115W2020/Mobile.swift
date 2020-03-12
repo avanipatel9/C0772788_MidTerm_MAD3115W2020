@@ -18,7 +18,7 @@ class  Mobile: Bill
     var ratePerMinute: Double = 0.50
     
     
-    init(billID: String, billDate: Date, billType: BillType, mobileManufacturerName: String, planName: String, mobileNumber: String, internetGBUsed: Double, minuteUsed: Int) throws {
+    init(billID: String, billDate: Date, billType: BillType, mobileManufacturerName: String, planName: String, mobileNumber: String, internetGBUsed: Double, minuteUsed: Int){
         self.mobileManufacturerName=mobileManufacturerName
         self.planName=planName
 //        if !mobileNumber.isValidPhone()
