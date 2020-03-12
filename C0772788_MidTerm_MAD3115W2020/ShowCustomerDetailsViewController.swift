@@ -21,11 +21,23 @@ class ShowCustomerDetailsViewController: UIViewController {
     }
     
     @IBAction func btnViewBillsClick(_ sender: Any) {
+        if customer?.bills.count == 0
+        {
+            
+        }
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let billDetailsVC = sb.instantiateViewController(identifier: "billDetailsVC") as! ShowBillDetailsViewController
+        let billDetailsVC = sb.instantiateViewController(identifier: "billDetailsVC") as! ShowBillDetailsViewController 
         billDetailsVC.customer = self.customer
         navigationController?.pushViewController(billDetailsVC, animated: true)
         
+    }
+    
+    func showAlert(message: String)
+    {
+        let alert = UIAlertController(title: "Error", message:message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
     
     func displaySelectedCustomerDetails()
