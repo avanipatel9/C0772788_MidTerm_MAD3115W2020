@@ -8,5 +8,5 @@
 
 import Foundation
 protocol CalculateBill {
-    func calculateTotalBill()
+    func calculateTotalBill()-> Double
 }

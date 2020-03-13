@@ -38,21 +38,21 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
                 cell.imgBillType.image = UIImage(named: "hydro1")
                 cell.lblBillID.text = "ID : \(bill.billID)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
-                cell.lblBillAmount.text = "Amount : \(bill.billAmount)"
+                cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
             else if bill.billType == .MOBILE
             {
                 cell.imgBillType.image = UIImage(named: "mobile1")
-                cell.lblBillID.text = "ID : \(bill.billID)"
+                cell.lblBillID.text = "ID : $\(bill.billID)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
-                cell.lblBillAmount.text = "Amount : \(bill.billAmount)"
+                cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
             else if bill.billType == .INTERNET
             {
                 cell.imgBillType.image = UIImage(named: "wifi1")
                 cell.lblBillID.text = "ID : \(bill.billID)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
-                cell.lblBillAmount.text = "Amount : \(bill.billAmount)"
+                cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
         return cell
     }
@@ -62,7 +62,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(200.0)
+        return CGFloat(150.0)
     }
     
 }

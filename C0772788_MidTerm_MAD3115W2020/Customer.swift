@@ -25,6 +25,7 @@ class Customer: CalculateBill
         self.firstName=firstName
         self.lastName=lastName
         self.emailID=emailID
+        self.totalBillToPay = calculateTotalBill()
     }
     
     func addBill(bill: Bill, billID: String)
@@ -47,10 +48,11 @@ class Customer: CalculateBill
         return allBills
     }
     
-    func calculateTotalBill() {
+    func calculateTotalBill()-> Double {
         for i in bills {
-            totalBillToPay = totalBillToPay + i.value.billAmount
+            self.totalBillToPay = self.totalBillToPay + i.value.billAmount
         }
+        return totalBillToPay
     }
     
 }

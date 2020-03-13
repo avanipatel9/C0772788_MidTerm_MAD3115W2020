@@ -23,7 +23,7 @@ class ShowCustomerDetailsViewController: UIViewController {
     @IBAction func btnViewBillsClick(_ sender: Any) {
         if customer?.bills.count == 0
         {
-            
+            showAlert(message: "Sorry, This Customer has no bills")
         }
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let billDetailsVC = sb.instantiateViewController(identifier: "billDetailsVC") as! ShowBillDetailsViewController 

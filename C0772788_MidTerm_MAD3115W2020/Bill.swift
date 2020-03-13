@@ -25,7 +25,7 @@ class Bill: CalculateBill
         self.billType = billType
     }
     
-    func calculateTotalBill() {
-        
+    func calculateTotalBill()->Double {
+        return 0.0
     }
 }
