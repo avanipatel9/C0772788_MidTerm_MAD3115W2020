@@ -21,9 +21,22 @@ class ShowBillDetailsViewController: UIViewController {
         self.bills = customer!.getAllBills()
         //self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Customer Bills"
+        self.addNewBillButton()
         self.lblTotalBillToPay.text = "Total Bill To Pay : $ \(customer!.calculateTotalBill())"
         
         // Do any additional setup after loading the view.
+    }
+    private func addNewBillButton()
+    {
+        let newBillButton = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(self.addNewBill))
+        self.navigationItem.rightBarButtonItem = newBillButton
+    }
+    @objc func addNewBill()
+    {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewBillVC = sb.instantiateViewController(identifier: "addNewBillVC") as! AddNewBillViewController
+        addNewBillVC.customer = self.customer
+        navigationController?.pushViewController(addNewBillVC, animated: true)
     }
 }
 

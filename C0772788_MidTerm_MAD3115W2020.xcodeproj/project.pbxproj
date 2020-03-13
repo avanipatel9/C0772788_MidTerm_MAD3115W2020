@@ -19,6 +19,7 @@
 		473885122411DA7900C66085 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473885112411DA7900C66085 /* DataStorage.swift */; };
 		473F163E2412D61200EEC35A /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */; };
 		4767A23A241AD8E90026BA7D /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767A239241AD8E90026BA7D /* BillTableViewCell.swift */; };
+		4767A25C241B11A00026BA7D /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767A25B241B11A00026BA7D /* AddNewBillViewController.swift */; };
 		477CBBAC241837A500AD158B /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBAB241837A500AD158B /* Hydro.swift */; };
 		477CBBAE241837B700AD158B /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBAD241837B700AD158B /* Mobile.swift */; };
 		477CBBB0241837C400AD158B /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CBBAF241837C400AD158B /* Internet.swift */; };
@@ -45,6 +46,7 @@
 		473885112411DA7900C66085 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		473F163D2412D61200EEC35A /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		4767A239241AD8E90026BA7D /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		4767A25B241B11A00026BA7D /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 		477CBBAB241837A500AD158B /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		477CBBAD241837B700AD158B /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		477CBBAF241837C400AD158B /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				477CBBB72418443000AD158B /* ShowCustomerDetailsViewController.swift */,
 				477CBBB924184AEA00AD158B /* ShowBillDetailsViewController.swift */,
 				4767A239241AD8E90026BA7D /* BillTableViewCell.swift */,
+				4767A25B241B11A00026BA7D /* AddNewBillViewController.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				473884F42411ADB700C66085 /* AppDelegate.swift in Sources */,
 				473884F62411ADB700C66085 /* SceneDelegate.swift in Sources */,
 				477CBBB2241837D600AD158B /* Bill.swift in Sources */,
+				4767A25C241B11A00026BA7D /* AddNewBillViewController.swift in Sources */,
 				477CBBBA24184AEA00AD158B /* ShowBillDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
