@@ -12,6 +12,8 @@ class ShowBillDetailsViewController: UIViewController {
     
     @IBOutlet weak var tblBills: UITableView!
     
+    @IBOutlet weak var lblTotalBillToPay: UILabel!
+    
     var customer : Customer?
     var bills : [Bill] = []
     override func viewDidLoad() {
@@ -19,6 +21,7 @@ class ShowBillDetailsViewController: UIViewController {
         self.bills = customer!.getAllBills()
         //self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Customer Bills"
+        self.lblTotalBillToPay.text = "Total Bill To Pay : $ \(customer!.calculateTotalBill())"
         
         // Do any additional setup after loading the view.
     }
@@ -43,7 +46,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
             else if bill.billType == .MOBILE
             {
                 cell.imgBillType.image = UIImage(named: "mobile1")
-                cell.lblBillID.text = "ID : $\(bill.billID)"
+                cell.lblBillID.text = "ID : \(bill.billID)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
                 cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
