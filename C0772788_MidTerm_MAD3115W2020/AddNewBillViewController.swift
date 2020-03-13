@@ -17,7 +17,8 @@ class AddNewBillViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func segmentBillType(_ sender: UISegmentedControl) {
+    @IBAction func segmentBillType(_ sender: UISegmentedControl)
+    {
         
     }
 }
