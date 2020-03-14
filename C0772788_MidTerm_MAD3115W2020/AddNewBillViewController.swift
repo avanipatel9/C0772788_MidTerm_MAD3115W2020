@@ -10,6 +10,9 @@ import UIKit
 
 class AddNewBillViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var viewHydro: UIView!
+    @IBOutlet weak var viewInternet: UIView!
+    @IBOutlet weak var viewMobile: UIView!
     @IBOutlet weak var segBillType: UISegmentedControl!
     var customer : Customer?
     var datePicker : UIDatePicker!
@@ -28,6 +31,9 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtBillDate.delegate = self
+        self.viewHydro.isHidden = true
+        self.viewMobile.isHidden = true
+        self.viewInternet.isHidden = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -82,39 +88,21 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
     {
         if sender.selectedSegmentIndex == 0
         {
-            txtAgencyName.isHidden = false
-            txtUnitConsumed.isHidden = false
-            txtManufacturerName.isHidden = true
-            txtPlanName.isHidden = true
-            txtMobileNumber.isHidden = true
-            txtMobileGBUsed.isHidden = true
-            txtMinutesUsed.isHidden = true
-            txtInternetProviderName.isHidden = true
-            txtInternetGBUsed.isHidden = true
+            viewHydro.isHidden = false
+            viewMobile.isHidden = true
+            viewInternet.isHidden = true
         }
         else if sender.selectedSegmentIndex == 1
         {
-            txtAgencyName.isHidden = true
-            txtUnitConsumed.isHidden = true
-            txtManufacturerName.isHidden = true
-            txtPlanName.isHidden = true
-            txtMobileNumber.isHidden = true
-            txtMobileGBUsed.isHidden = true
-            txtMinutesUsed.isHidden = true
-            txtInternetProviderName.isHidden = false
-            txtInternetGBUsed.isHidden = false
+            viewInternet.isHidden = false
+            viewHydro.isHidden = true
+            viewMobile.isHidden = true
         }
         else if sender.selectedSegmentIndex == 2
         {
-            txtAgencyName.isHidden = true
-            txtUnitConsumed.isHidden = true
-            txtManufacturerName.isHidden = false
-            txtPlanName.isHidden = false
-            txtMobileNumber.isHidden = false
-            txtMobileGBUsed.isHidden = false
-            txtMinutesUsed.isHidden = false
-            txtInternetProviderName.isHidden = true
-            txtInternetGBUsed.isHidden = true
+            viewMobile.isHidden = false
+            viewHydro.isHidden = true
+            viewInternet.isHidden = true
         }
     }
 

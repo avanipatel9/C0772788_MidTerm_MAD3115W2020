@@ -19,8 +19,8 @@ class AddNewCustomerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cntLastNameHeight.constant = 0
-        txtLastName.layoutIfNeeded()
+//        cntLastNameHeight.constant = 0
+//        txtLastName.layoutIfNeeded()
         
         // Do any additional setup after loading the view.
     }

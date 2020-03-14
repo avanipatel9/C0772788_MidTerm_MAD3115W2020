@@ -151,19 +151,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvb-Wa-mGJ">
-                                <rect key="frame" x="20" y="248" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="09k-I0-Zzl"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvb-Wa-mGJ">
+                                <rect key="frame" x="20" y="241" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVs-td-6mB">
-                                <rect key="frame" x="20" y="308" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="RKw-aS-8au"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVs-td-6mB">
+                                <rect key="frame" x="20" y="297" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -179,23 +175,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="KOf-lW-2n8" firstAttribute="leading" secondItem="Bfm-Y1-yPQ" secondAttribute="leading" constant="20" id="7q0-tL-NdR"/>
-                            <constraint firstItem="Bfm-Y1-yPQ" firstAttribute="trailing" secondItem="EVs-td-6mB" secondAttribute="trailing" constant="20" id="J2F-6i-g7S"/>
                             <constraint firstItem="cy6-ah-tsq" firstAttribute="leading" secondItem="Bfm-Y1-yPQ" secondAttribute="leading" constant="20" id="URK-Yh-a4Y"/>
-                            <constraint firstItem="EVs-td-6mB" firstAttribute="top" secondItem="Vvb-Wa-mGJ" secondAttribute="bottom" constant="20" id="Wh4-eS-9fw"/>
                             <constraint firstItem="Bfm-Y1-yPQ" firstAttribute="trailing" secondItem="cy6-ah-tsq" secondAttribute="trailing" constant="20" id="XHw-tT-SYF"/>
-                            <constraint firstItem="Bfm-Y1-yPQ" firstAttribute="trailing" secondItem="Vvb-Wa-mGJ" secondAttribute="trailing" constant="20" id="eE4-Sa-hhs"/>
-                            <constraint firstItem="Vvb-Wa-mGJ" firstAttribute="top" secondItem="KOf-lW-2n8" secondAttribute="bottom" constant="20" id="lLL-qd-kvZ"/>
-                            <constraint firstItem="EVs-td-6mB" firstAttribute="leading" secondItem="Bfm-Y1-yPQ" secondAttribute="leading" constant="20" id="mbk-pB-vPB"/>
                             <constraint firstItem="Bfm-Y1-yPQ" firstAttribute="trailing" secondItem="KOf-lW-2n8" secondAttribute="trailing" constant="20" id="mgy-2a-lgV"/>
                             <constraint firstItem="cy6-ah-tsq" firstAttribute="top" secondItem="Bfm-Y1-yPQ" secondAttribute="top" constant="40" id="srz-Ky-vNz"/>
                             <constraint firstItem="KOf-lW-2n8" firstAttribute="top" secondItem="cy6-ah-tsq" secondAttribute="bottom" constant="20" id="tHX-Qa-97a"/>
-                            <constraint firstItem="Vvb-Wa-mGJ" firstAttribute="leading" secondItem="Bfm-Y1-yPQ" secondAttribute="leading" constant="20" id="uyz-Q4-Uzo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bfm-Y1-yPQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Customer" id="iHq-jZ-dFs"/>
                     <connections>
-                        <outlet property="cntLastNameHeight" destination="09k-I0-Zzl" id="rj9-U7-2We"/>
                         <outlet property="txtCustomerID" destination="cy6-ah-tsq" id="wjj-r6-br7"/>
                         <outlet property="txtEmail" destination="EVs-td-6mB" id="QBa-dN-XF5"/>
                         <outlet property="txtFirstName" destination="KOf-lW-2n8" id="om5-LN-Ezd"/>
@@ -370,8 +359,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4Y-eG-s9r">
+                                <rect key="frame" x="62" y="122" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Eo-nHn">
+                                <rect key="frame" x="62" y="175" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nge-aa-CVi">
+                                <rect key="frame" x="42" y="222" width="352" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agency Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9M-9W-g4L">
+                                        <rect key="frame" x="8" y="8" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit Consumed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ca-az-g0U">
+                                        <rect key="frame" x="8" y="64" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-mD-iEO">
+                                <rect key="frame" x="36" y="355" width="342" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gH-vx-hpX">
+                                        <rect key="frame" x="26" y="95" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0O-ny-gX9">
+                                        <rect key="frame" x="26" y="153" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-Lz-dBG">
+                                        <rect key="frame" x="26" y="210" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minutes Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adx-6R-1gZ">
+                                        <rect key="frame" x="26" y="266" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MAnufacturer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsq-fH-3Zy">
+                                        <rect key="frame" x="26" y="41" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-t7-HHj">
+                                <rect key="frame" x="36" y="683" width="352" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Internet GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrV-Vd-Wx0">
+                                        <rect key="frame" x="31" y="83" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provider Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ML-UD-eSa">
+                                        <rect key="frame" x="31" y="41" width="290" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSE-aC-TPb">
+                                <rect key="frame" x="126" y="832" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save Bill">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSaveBillClick:" destination="sgK-kt-236" eventType="touchUpInside" id="0Ad-gC-qdg"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-Qu-fa2">
-                                <rect key="frame" x="62" y="111" width="290" height="32"/>
+                                <rect key="frame" x="62" y="83" width="290" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Hydro"/>
@@ -382,107 +469,26 @@
                                     <action selector="segmentBillType:" destination="sgK-kt-236" eventType="valueChanged" id="r8h-ao-c8v"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4Y-eG-s9r">
-                                <rect key="frame" x="62" y="181" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Eo-nHn">
-                                <rect key="frame" x="62" y="235" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plan Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yv4-Cp-Ug9">
-                                <rect key="frame" x="62" y="457" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYU-hh-iEc">
-                                <rect key="frame" x="62" y="515" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN8-4J-812">
-                                <rect key="frame" x="62" y="572" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minutes Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDy-Ep-cO7">
-                                <rect key="frame" x="62" y="628" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provider Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZo-1f-w6e">
-                                <rect key="frame" x="62" y="683" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Internet GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVa-5k-wbI">
-                                <rect key="frame" x="62" y="741" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSE-aC-TPb">
-                                <rect key="frame" x="126" y="806" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Save Bill">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnSaveBillClick:" destination="sgK-kt-236" eventType="touchUpInside" id="0Ad-gC-qdg"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MAnufacturer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tf7-f9-EQr">
-                                <rect key="frame" x="62" y="403" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Asd-4r-rzD">
-                                <rect key="frame" x="39" y="287" width="336" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agency Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPg-6Z-y59">
-                                        <rect key="frame" x="23" y="8" width="290" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit Consumed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmL-ct-hqM">
-                                        <rect key="frame" x="23" y="65" width="290" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="g6O-AF-A4E"/>
                     </view>
                     <connections>
                         <outlet property="segBillType" destination="NxG-Qu-fa2" id="NUh-MN-0gN"/>
-                        <outlet property="txtAgencyName" destination="JPg-6Z-y59" id="FjG-TE-fPe"/>
+                        <outlet property="txtAgencyName" destination="A9M-9W-g4L" id="Vll-DZ-JZO"/>
                         <outlet property="txtBillDate" destination="zMF-Eo-nHn" id="SgG-iw-hq7"/>
                         <outlet property="txtBillID" destination="m4Y-eG-s9r" id="ITq-qg-AcP"/>
-                        <outlet property="txtInternetGBUsed" destination="iVa-5k-wbI" id="RcB-4j-NeO"/>
-                        <outlet property="txtInternetProviderName" destination="gZo-1f-w6e" id="dNo-tH-IQX"/>
-                        <outlet property="txtManufacturerName" destination="tf7-f9-EQr" id="48R-ll-902"/>
-                        <outlet property="txtMinutesUsed" destination="MDy-Ep-cO7" id="Sgk-Ox-OP9"/>
-                        <outlet property="txtMobileGBUsed" destination="lN8-4J-812" id="ndw-HZ-T16"/>
-                        <outlet property="txtMobileNumber" destination="nYU-hh-iEc" id="38w-Rz-3uL"/>
-                        <outlet property="txtPlanName" destination="yv4-Cp-Ug9" id="yhN-Kz-ana"/>
-                        <outlet property="txtUnitConsumed" destination="lmL-ct-hqM" id="Do9-o2-3DK"/>
+                        <outlet property="txtInternetGBUsed" destination="SrV-Vd-Wx0" id="lpC-g1-1gu"/>
+                        <outlet property="txtInternetProviderName" destination="9ML-UD-eSa" id="e8s-hG-k3R"/>
+                        <outlet property="txtManufacturerName" destination="Qsq-fH-3Zy" id="bPv-YB-1CA"/>
+                        <outlet property="txtMinutesUsed" destination="adx-6R-1gZ" id="Z55-Fm-ZIg"/>
+                        <outlet property="txtMobileGBUsed" destination="Tse-Lz-dBG" id="kMO-D5-Ha0"/>
+                        <outlet property="txtMobileNumber" destination="m0O-ny-gX9" id="PeA-fS-qqa"/>
+                        <outlet property="txtPlanName" destination="6gH-vx-hpX" id="gSP-T1-hI5"/>
+                        <outlet property="txtUnitConsumed" destination="9Ca-az-g0U" id="koL-rl-Wqi"/>
+                        <outlet property="viewHydro" destination="Nge-aa-CVi" id="uYq-Qu-a7Y"/>
+                        <outlet property="viewInternet" destination="vmd-t7-HHj" id="VjZ-DB-PZe"/>
+                        <outlet property="viewMobile" destination="bVO-mD-iEO" id="Q7d-f8-F97"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTd-ej-ITi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
