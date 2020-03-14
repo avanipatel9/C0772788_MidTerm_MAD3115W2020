@@ -14,8 +14,13 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
+    
+    @IBOutlet weak var cntLastNameHeight: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cntLastNameHeight.constant = 0
+        txtLastName.layoutIfNeeded()
         
         // Do any additional setup after loading the view.
     }

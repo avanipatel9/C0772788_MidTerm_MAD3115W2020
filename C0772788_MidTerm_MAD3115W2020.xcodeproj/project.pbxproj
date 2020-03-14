@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4729BCCD2414C0F0008FF670 /* Admin.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4729BCCC2414C0F0008FF670 /* Admin.plist */; };
+		473319CF241C4900009D3737 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473319CE241C4900009D3737 /* Extension+String.swift */; };
 		473884F42411ADB700C66085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473884F32411ADB700C66085 /* AppDelegate.swift */; };
 		473884F62411ADB700C66085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473884F52411ADB700C66085 /* SceneDelegate.swift */; };
 		473884F82411ADB700C66085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473884F72411ADB700C66085 /* LoginViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		4729BCCC2414C0F0008FF670 /* Admin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Admin.plist; sourceTree = "<group>"; };
+		473319CE241C4900009D3737 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		473884F02411ADB700C66085 /* C0772788_MidTerm_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0772788_MidTerm_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473884F32411ADB700C66085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		473884F52411ADB700C66085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				477CBBB924184AEA00AD158B /* ShowBillDetailsViewController.swift */,
 				4767A239241AD8E90026BA7D /* BillTableViewCell.swift */,
 				4767A25B241B11A00026BA7D /* AddNewBillViewController.swift */,
+				473319CE241C4900009D3737 /* Extension+String.swift */,
 			);
 			path = C0772788_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				4738850A2411BAD500C66085 /* CustomerListTableViewController.swift in Sources */,
 				4767A23A241AD8E90026BA7D /* BillTableViewCell.swift in Sources */,
 				473885102411D96800C66085 /* Customer.swift in Sources */,
+				473319CF241C4900009D3737 /* Extension+String.swift in Sources */,
 				473884F82411ADB700C66085 /* LoginViewController.swift in Sources */,
 				477CBBB424183AEE00AD158B /* CalculateBill.swift in Sources */,
 				47DF0E3C24144EED00DD6151 /* Validation.swift in Sources */,
