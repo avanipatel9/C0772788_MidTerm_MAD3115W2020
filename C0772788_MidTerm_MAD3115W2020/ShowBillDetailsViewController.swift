@@ -16,15 +16,16 @@ class ShowBillDetailsViewController: UIViewController {
     
     var customer : Customer?
     var bills : [Bill] = []
+    var totalBillToPay = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bills = customer!.getAllBills()
         //self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Customer Bills"
         self.addNewBillButton()
-        self.lblTotalBillToPay.text = "Total Bill To Pay : $ \(customer!.calculateTotalBill())"
-        
-        // Do any additional setup after loading the view.
+        self.totalBillToPay = customer!.calculateTotalBill()
+        self.lblTotalBillToPay.text = "Total Bill To Pay : $ \(totalBillToPay)"
     }
     private func addNewBillButton()
     {
