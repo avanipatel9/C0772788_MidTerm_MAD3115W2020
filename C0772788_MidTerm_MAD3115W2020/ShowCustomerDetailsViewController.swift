@@ -17,6 +17,7 @@ class ShowCustomerDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displaySelectedCustomerDetails()
+        self.addNewBillButton()
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +32,18 @@ class ShowCustomerDetailsViewController: UIViewController {
         navigationController?.pushViewController(billDetailsVC, animated: true)
         
     }
+    private func addNewBillButton()
+       {
+           let newBillButton = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(self.addNewBill))
+           self.navigationItem.rightBarButtonItem = newBillButton
+       }
+       @objc func addNewBill()
+       {
+           let sb = UIStoryboard(name: "Main", bundle: nil)
+           let addNewBillVC = sb.instantiateViewController(identifier: "addNewBillVC") as! AddNewBillViewController
+           addNewBillVC.customer = self.customer
+           navigationController?.pushViewController(addNewBillVC, animated: true)
+       }
     
     func showAlert(message: String)
     {

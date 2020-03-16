@@ -290,6 +290,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aO1-ht-Js3"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lblEmail" destination="08e-FG-Nzf" id="Uib-PE-O50"/>
                         <outlet property="lblID" destination="kph-ss-u3z" id="J6k-o2-15V"/>
