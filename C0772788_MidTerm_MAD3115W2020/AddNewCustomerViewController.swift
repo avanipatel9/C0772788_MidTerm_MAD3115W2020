@@ -33,16 +33,6 @@ class AddNewCustomerViewController: UIViewController {
         guard let newCustomerFirstName = txtFirstName.text else {return}
         guard let newCustomerLastName = txtLastName.text else {return}
         guard let newCustomerEmail = txtEmail.text else {return}
-        //validating email
-        if self.validation.isValidEmail(email: newCustomerEmail) == false
-        {
-            showAlert(message: "Invalid Email ID")
-            return
-        }
-        else
-        {
-            validatedCustomerEmail = newCustomerEmail
-        }
         
         //validating empty fields and showing alert for it
         if  newCustomerID == ""
@@ -68,7 +58,17 @@ class AddNewCustomerViewController: UIViewController {
         // adding new customer
         else
         {
+            if self.validation.isValidEmail(email: newCustomerEmail) == false
+            {
+                showAlert(message: "Invalid Email ID")
+                return
+            }
+            else
+            {
+                validatedCustomerEmail = newCustomerEmail
+            }
             DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustomerID, firstName: newCustomerFirstName, lastName: newCustomerLastName, emailID: validatedCustomerEmail))
+            navigationController?.popViewController(animated: true)
         }
     }
     

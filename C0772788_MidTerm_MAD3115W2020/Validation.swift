@@ -18,9 +18,9 @@ class Validation
     }
     
     // function for phone validation
-    func isValidPhone() -> Bool {
+    func isValidPhone(phone: String) -> Bool {
         let PHONE_REGEX = "^(?:\\+?1[-.●]?)?\\(?([0-9]{3})\\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        return phoneTest.evaluate(with: self)
+        return phoneTest.evaluate(with: phone)
     }
 }

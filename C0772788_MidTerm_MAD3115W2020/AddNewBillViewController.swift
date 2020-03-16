@@ -9,7 +9,8 @@
 import UIKit
 
 class AddNewBillViewController: UIViewController, UITextFieldDelegate {
-
+    
+    var validation = Validation()
     @IBOutlet weak var viewSaveBill: UIView!
     @IBOutlet weak var viewHydro: UIView!
     @IBOutlet weak var viewInternet: UIView!
@@ -82,7 +83,7 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
     {
         txtBillDate.resignFirstResponder()
     }
-
+    
     
     
     @IBAction func segmentBillType(_ sender: UISegmentedControl)
@@ -106,24 +107,133 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
             viewInternet.isHidden = true
         }
     }
-
+    
     @IBAction func btnSaveBillClick(_ sender: UIButton) {
+        var validatedCustomerPhone = String()
+        guard let newBillID = txtBillID.text else {return}
+        guard let newBillDate = txtBillDate.text else {return}
+        guard let newAgencyName = txtAgencyName.text else {return}
+        guard let newUnitConsumed = txtUnitConsumed.text else {return}
+        guard let newProviderName = txtInternetProviderName.text else {return}
+        guard let newInternetGBUsed = txtInternetGBUsed.text else {return}
+        guard let newMobileManufacturerName = txtManufacturerName.text else {return}
+        guard let newPlanName = txtPlanName.text else {return}
+        guard let newMobileNumber = txtMobileNumber.text else {return}
+        guard let newMobileGBUsed = txtMobileGBUsed.text else {return}
+        guard let newMinutesUsed = txtMinutesUsed.text else {return}
         
-        if segBillType.selectedSegmentIndex == 0{
-            let tempBillObj = Hydro(billID: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.HYDRO, agencyName: txtAgencyName.text!, unitConsumed: Int(txtUnitConsumed.text!)!)
-            customer?.addBill(bill: tempBillObj, billID: txtBillID.text!)
+        
+        if segBillType.selectedSegmentIndex == 0
+        {
+            if newBillID == ""
+            {
+                showAlert(message: "Please Enter Bill ID")
+                return
+            }
+            else if newBillDate == ""
+            {
+                showAlert(message: "Please Enter Bill Date")
+            }
+            else if newAgencyName == ""
+            {
+                showAlert(message: "Please Enter Agency Name")
+            }
+            else if newUnitConsumed == ""
+            {
+                showAlert(message: "Please Enter Units Consumed")
+            }
+            else
+            {
+                let tempBillObj = Hydro(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.HYDRO, agencyName: newAgencyName, unitConsumed: Int(newUnitConsumed)!)
+                customer?.addBill(bill: tempBillObj, billID: newBillID)
+                //showAlert(message: "Bill added successfully")
+                navigationController?.popViewController(animated: true)
+            }
         }
         else if segBillType.selectedSegmentIndex == 1
         {
-            let tempBillObj = Internet(billID: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtInternetProviderName.text!, internetGBUsed: Double(txtInternetGBUsed.text!)!)
-            customer?.addBill(bill: tempBillObj, billID: txtBillID.text!)
+            if newBillID == ""
+            {
+                showAlert(message: "Please Enter Bill ID")
+                return
+            }
+            else if newBillDate == ""
+            {
+                showAlert(message: "Please Enter Bill Date")
+            }
+            else if newProviderName == ""
+            {
+                showAlert(message: "Please Enter Internet Provider Name")
+            }
+            else if newInternetGBUsed == ""
+            {
+                showAlert(message: "Please Enter Internet GB Used")
+            }
+            else
+            {
+                let tempBillObj = Internet(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.INTERNET, providerName: newProviderName, internetGBUsed: Double(newInternetGBUsed)!)
+                customer?.addBill(bill: tempBillObj, billID: newBillID)
+                //showAlert(message: "Bill added successfully")
+                navigationController?.popViewController(animated: true)
+            }
         }
         else if segBillType.selectedSegmentIndex == 2
         {
-            let tempBillObj = Mobile(billID: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, mobileManufacturerName: txtManufacturerName.text!, planName: txtPlanName.text!, mobileNumber: txtMobileNumber.text!, internetGBUsed: Double(txtInternetGBUsed.text!)!, minuteUsed: Int(txtMinutesUsed.text!)!)
-            customer?.addBill(bill: tempBillObj, billID: txtBillID.text!)
+            if newBillID == ""
+            {
+                showAlert(message: "Please Enter Bill ID")
+                return
+            }
+            else if newBillDate == ""
+            {
+                showAlert(message: "Please Enter Bill Date")
+            }
+            else if newMobileManufacturerName == ""
+            {
+                showAlert(message: "Please Enter Mobile Manufacturer Name")
+            }
+            else if newPlanName == ""
+            {
+                showAlert(message: "Please Enter Plan Name")
+            }
+            else if newMobileNumber == ""
+            {
+                showAlert(message: "Please Enter Mobile Number")
+            }
+            else if newMobileGBUsed == ""
+            {
+                showAlert(message: "Please Enter Internet GB Used")
+            }
+            else if newMinutesUsed == ""
+            {
+                showAlert(message: "Please Enter Minutes Used")
+            }
+            else
+            {
+                if self.validation.isValidPhone(phone: newMobileNumber) == false
+                {
+                    showAlert(message: "Invalid Phone Number")
+                }
+                else
+                {
+                    validatedCustomerPhone = newMobileNumber
+                    
+                    let tempBillObj = Mobile(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.MOBILE, mobileManufacturerName: newMobileManufacturerName, planName: newPlanName, mobileNumber: validatedCustomerPhone, internetGBUsed: Double(newMobileGBUsed)!, minuteUsed: Int(newMinutesUsed)!)
+                    customer?.addBill(bill: tempBillObj, billID: newBillID)
+                    //showAlert(message: "Bill added successfully")
+                    navigationController?.popViewController(animated: true)
+                }
+            }
+            
         }
         
-        navigationController?.popViewController(animated: true)
+    }
+    
+    func showAlert(message: String)
+    {
+        let alert = UIAlertController(title: "Error", message:message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
 }
