@@ -10,6 +10,7 @@ import UIKit
 
 class AddNewBillViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var viewSaveBill: UIView!
     @IBOutlet weak var viewHydro: UIView!
     @IBOutlet weak var viewInternet: UIView!
     @IBOutlet weak var viewMobile: UIView!

@@ -25,12 +25,13 @@ class Customer: CalculateBill
         self.firstName=firstName
         self.lastName=lastName
         self.emailID=emailID
-        self.totalBillToPay = calculateTotalBill()
+        //self.totalBillToPay = calculateTotalBill()
     }
     
     func addBill(bill: Bill, billID: String)
     {
         bills.updateValue(bill, forKey: billID)
+        self.totalBillToPay = self.totalBillToPay+bill.billAmount;
     }
     
     func removeBill(bill: Bill, billID: String)
@@ -49,10 +50,11 @@ class Customer: CalculateBill
     }
     
     func calculateTotalBill()-> Double {
-        for i in bills {
-            self.totalBillToPay = self.totalBillToPay + i.value.billAmount
-        }
-        return totalBillToPay
+//        for i in bills {
+//            self.totalBillToPay = self.totalBillToPay + i.value.billAmount
+//        }
+//        return totalBillToPay
+        return self.totalBillToPay;
     }
     
 }
