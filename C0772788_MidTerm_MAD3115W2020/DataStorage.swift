@@ -40,6 +40,7 @@ class DataStorage
 
     var h1 = Hydro(billID: "HYD001", billDate: Date.from(year: 2019, month: 04, day: 01) ?? Date(), billType: BillType.HYDRO, agencyName: "Planet Energy", unitConsumed: 29)
     var h2 = Hydro(billID: "HYD002", billDate: Date.from(year: 2019, month: 10, day: 12) ?? Date(), billType: BillType.HYDRO, agencyName: "Planet Energy", unitConsumed: 50)
+    var h3 = Hydro(billID: "HYD003", billDate: Date.from(year: 2018, month: 04, day: 21) ?? Date(), billType: .HYDRO, agencyName: "Planet Energy", unitConsumed: 60)
 
     var c1 = Customer(customerID: "C001", firstName: "Avani", lastName: "Patel", emailID: "admin@gmail.com")
 
@@ -59,6 +60,7 @@ class DataStorage
         c2.addBill(bill: i2, billID: i2.billID)
         c2.addBill(bill: i3, billID: i3.billID)
         c2.addBill(bill: m2, billID: m2.billID)
+        c2.addBill(bill: h3, billID: h3.billID)
         
         c3.addBill(bill: h2, billID: h2.billID)
         

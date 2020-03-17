@@ -11,7 +11,8 @@ import UIKit
 class BillTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgBillType: UIImageView!
-    @IBOutlet weak var lblBillID: UILabel!
+    @IBOutlet weak var lblBillType: UILabel!
     @IBOutlet weak var lblBillDate: UILabel!
     @IBOutlet weak var lblBillAmount: UILabel!
+    
 }

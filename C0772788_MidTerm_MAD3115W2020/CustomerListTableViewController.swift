@@ -19,6 +19,10 @@ class CustomerListTableViewController: UIViewController {
         self.navigationItem.title = "Customer List"
         customers = DataStorage.getInstance().getAllCustomers()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        customers = DataStorage.getInstance().getAllCustomers()
+        tblCustomer.reloadData()
+    }
 }
 
 extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate

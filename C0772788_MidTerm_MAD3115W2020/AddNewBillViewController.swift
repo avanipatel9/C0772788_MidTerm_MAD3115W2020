@@ -146,7 +146,6 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
             {
                 let tempBillObj = Hydro(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.HYDRO, agencyName: newAgencyName, unitConsumed: Int(newUnitConsumed)!)
                 customer?.addBill(bill: tempBillObj, billID: newBillID)
-                //showAlert(message: "Bill added successfully")
                 navigationController?.popViewController(animated: true)
             }
         }
@@ -173,7 +172,6 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
             {
                 let tempBillObj = Internet(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.INTERNET, providerName: newProviderName, internetGBUsed: Double(newInternetGBUsed)!)
                 customer?.addBill(bill: tempBillObj, billID: newBillID)
-                //showAlert(message: "Bill added successfully")
                 navigationController?.popViewController(animated: true)
             }
         }
@@ -220,7 +218,6 @@ class AddNewBillViewController: UIViewController, UITextFieldDelegate {
                     
                     let tempBillObj = Mobile(billID: newBillID, billDate: newBillDate.toDate(), billType: BillType.MOBILE, mobileManufacturerName: newMobileManufacturerName, planName: newPlanName, mobileNumber: validatedCustomerPhone, internetGBUsed: Double(newMobileGBUsed)!, minuteUsed: Int(newMinutesUsed)!)
                     customer?.addBill(bill: tempBillObj, billID: newBillID)
-                    //showAlert(message: "Bill added successfully")
                     navigationController?.popViewController(animated: true)
                 }
             }

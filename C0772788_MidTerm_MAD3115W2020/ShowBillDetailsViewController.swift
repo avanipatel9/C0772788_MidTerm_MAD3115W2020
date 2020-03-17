@@ -24,8 +24,12 @@ class ShowBillDetailsViewController: UIViewController {
         //self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Customer Bills"
         self.addNewBillButton()
-        self.totalBillToPay = customer!.calculateTotalBill()
+        self.totalBillToPay = customer!.getTotalBill()
         self.lblTotalBillToPay.text = "Total Bill To Pay : $ \(totalBillToPay)"
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.bills = customer!.getAllBills()
+        tblBills.reloadData()
     }
     private func addNewBillButton()
     {
@@ -53,21 +57,21 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
             if bill.billType == .HYDRO
             {
                 cell.imgBillType.image = UIImage(named: "hydro1")
-                cell.lblBillID.text = "ID : \(bill.billID)"
+                cell.lblBillType.text = "ID : \(bill.billType)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
                 cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
             else if bill.billType == .MOBILE
             {
                 cell.imgBillType.image = UIImage(named: "mobile1")
-                cell.lblBillID.text = "ID : \(bill.billID)"
+                cell.lblBillType.text = "ID : \(bill.billType)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
                 cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }
             else if bill.billType == .INTERNET
             {
                 cell.imgBillType.image = UIImage(named: "wifi1")
-                cell.lblBillID.text = "ID : \(bill.billID)"
+                cell.lblBillType.text = "ID : \(bill.billType)"
                 cell.lblBillDate.text = "Date : \(bill.billDate.getForamttedDate())"
                 cell.lblBillAmount.text = "Amount : $\(bill.billAmount)"
             }

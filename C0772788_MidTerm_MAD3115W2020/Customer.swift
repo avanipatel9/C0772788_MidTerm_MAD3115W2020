@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Customer: CalculateBill
+class Customer
 {
     var customerID:String
     var firstName:String
@@ -25,13 +25,12 @@ class Customer: CalculateBill
         self.firstName=firstName
         self.lastName=lastName
         self.emailID=emailID
-        //self.totalBillToPay = calculateTotalBill()
     }
     
     func addBill(bill: Bill, billID: String)
     {
         bills.updateValue(bill, forKey: billID)
-        self.totalBillToPay = self.totalBillToPay+bill.billAmount;
+        self.totalBillToPay = self.totalBillToPay + bill.billAmount;
     }
     
     func removeBill(bill: Bill, billID: String)
@@ -49,11 +48,7 @@ class Customer: CalculateBill
         return allBills
     }
     
-    func calculateTotalBill()-> Double {
-//        for i in bills {
-//            self.totalBillToPay = self.totalBillToPay + i.value.billAmount
-//        }
-//        return totalBillToPay
+    func getTotalBill()-> Double {
         return self.totalBillToPay;
     }
     
